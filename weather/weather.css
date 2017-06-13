@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bgImg {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 630px;
+    /* opacity: .6; */
+    /* background: url("bgImg2.jpg"); */
+    background: #4568dc;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right bottom, from(#b06ab3), to(#4568dc));
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+
+/* 以下渐变色挑选自https://uigradients.com, 很好的网站哟 */
+
+.bgGrad0 {
+    background: #00bf8f;
+    background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+    background: linear-gradient(to right, #001510, #00bf8f);
+}
+
+.bgGrad1 {
+    background: #780206;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061161, #780206);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061161, #780206);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bgGrad2 {
+    background: #000046;
+    background: -webkit-gradient(linear, left top, right top, from(#1cb5e0), to(#000046));
+    background: linear-gradient(to right, #1cb5e0, #000046);
+}
+
+.bgGrad3 {
+    background: #4568dc;
+    background: -webkit-gradient(linear, left top, right top, from(#b06ab3), to(#4568dc));
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+.bgGrad4 {
+    background: #ff0084;
+    background: -webkit-linear-gradient(to right, #33001b, #ff0084);
+    background: linear-gradient(to right, #33001b, #ff0084);
+}
+
+.bgGrad5 {
+    background: #2196f3;
+    background: -webkit-gradient(linear, left top, right top, from(#f44336), to(#2196f3));
+    background: linear-gradient(to right, #f44336, #2196f3);
+}
+
+.bgGrad6 {
+    background: #360033;
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);
+    background: linear-gradient(to right, #0b8793, #360033);
+}
+
+.main {
+    display: block;
+    width: 662px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.getTime {
+    font-size: 18px;
+    display: inline-block;
+    width: 120px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 2px 3px 5px #333;
+    box-shadow: 2px 3px 5px #333;
+}
+
+.futureWeather {
+    margin-right: 10px;
+}
+
+.sevenDay,
+.futureWeather {
+    float: left;
+    width: 100px;
+    height: 160px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 3px 5px 10px #333;
+    box-shadow: 3px 5px 10px #333;
+}
+
+.firstDay {
+    width: 650px;
+    margin-top: 16px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 3px 5px 10px #333;
+    box-shadow: 3px 5px 10px #333;
+}
+
+.btn-getNew {
+    font-size: 18px;
+    display: inline-block;
+    width: 120px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 2px 3px 5px #333;
+    box-shadow: 2px 3px 5px #333;
+}
+
+.weather-title {
+    color: #fff;
+    text-shadow: 1px 1px 0 #CCC, 2px 2px 0 #CCC, /* end of 2 level deep grey shadow */
+    3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444;
+    /* end of 4 level deep dark shadow */
+}
+
+.firstDay:hover,
+.futureWeather:hover,
+.sevenDay:hover,
+.getTime:hover,
+.btn-getNew:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #0080ff;
+    -webkit-box-shadow: 2px 10px 30px #33c5c5;
+    box-shadow: 2px 10px 30px #33c5c5;
+    z-index: 0;
+}
+
+.renewNote {
+    font-size: 16px;
+    margin: 40px auto 10px auto;
+    text-align: center;
+    transition: all .5s ease-in;
+}
+
+.renewInfo {
+    display: none;
+    padding-left: 10px;
+    -webkit-transition: all 3s ease-in;
+    transition: all 3s ease-in;
+    color: #f00;
+}
+
+.cityName {
+    font-size: 18px;
+    width: 80px;
+    padding: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #0080ff;
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+}
+
+.cityName:hover {
+    color: #0080ff;
+    background-color: #fff;
+    box-shadow: 2px 3px 5px #333;
+}
+
+.weImgTd,
+.weImgFu {
+    position: absolute;
+    opacity: 0.8;
+    top: 30px;
+    z-index: -1;
+}
+
+.weImgTd {
+    left: 260px;
+}
+
+.weImgFu {
+    left: 0;
+}
+
+.footer {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    background-color: #0080FF;
+}
+
+@media screen and (min-width: 353px) and (max-width: 700px) {
+    .main {
+        width: 330px;
+    }
+    .firstDay {
+        width: 320px;
+    }
+    .renewNote {
+        font-size: 13px;
+    }
+    #showWeather3,
+    #showWeather6 {
+        margin-right: 0;
+    }
+    .weImgTd {
+        left: 110px;
+    }
+}
+
+@media screen and (max-width: 352px) {
+    .main {
+        width: 220px;
+    }
+    .firstDay {
+        width: 210px;
+        font-size: 12px;
+    }
+    #lunarDate {
+        letter-spacing: -1px;
+    }
+    #showWeather2,
+    #showWeather4,
+    #showWeather6 {
+        margin-right: 0;
+    }
+    .weImgTd {
+        left: 50px;
+    }
+    .getTime {
+        font-size: 16px;
+        display: block;
+        margin: 6px auto;
+    }
+    .renewNote {
+        font-size: 12px;
+    }
+    .btn-getNew {
+        font-size: 14px;
+        display: block;
+        width: 120px;
+        margin: 6px auto;
+    }
+}
