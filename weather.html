@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>天气预报-AJAX-聚合API-郑常龙</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="weather/weather.css">
+    <link rel="stylesheet" href="weather/kuCity.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="weather/lunarDate.js"></script>
+    <script type="text/javascript" src="weather/weather.js"></script>
+    <script type="text/javascript" src="weather/kuCity.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=8B9XAFTfj3EputLLsfLeFwmafcVkGpp2&s=1"></script>
+</head>
+
+<body>
+    <div class="bgImg gradBgClr" id="bgImg"></div>
+    <div class="main">
+        <h2 class="weather-title">天气预报</h2>
+        <input type="text" class="cityName tooltip-show" id="citySelect" data-toggle="tooltip" data-placement="bottom" title="点我可切换城市" value="武汉">
+        <div>
+            <div class="renewNote">注: 天气信息与中国天气网保持同步,
+                <br> 默认每天6:00/18:00自动更新</div>
+            <div id="getTime" class="getTime">
+                <span id="hourNow"></span>:
+                <span id="minNow"></span>:
+                <span id="secNow"></span>
+            </div>
+            <span id="btn-getNew" class="btn-getNew">点此立即更新</span>
+            <br>
+            <div id="renewInfo" class="renewInfo">天气信息已更新</div>
+        </div>
+        <div id="showWeather0" class="firstDay">
+            <img src="weather/img/sunnyToCloudy.png" class="weImgTd">
+            <br><span id="lunarDate"></span>
+            <br>
+            <br><span id="tdWe"></span>
+            <span id="tdTemp"></span>
+            <br>舒适度: <span id="tdClm"></span> 紫外线: <span id="tdUv"></span>
+            <br>锻炼: <span id="tdExer"></span> 洗车: <span id="tdWash"></span> 旅行: <span id="tdTravl"></span>
+            <br>温馨提示: <span id="tdTips"></span>
+            <br>
+            <br>
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather1">
+            </div>
+            <img src="weather/img/lightRain.png" class="weImgFu">
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather2">
+            </div>
+            <img src="weather/img/sunny.png" class="weImgFu">
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather3">
+            </div>
+            <img src="weather/img/cloudy.png" class="weImgFu">
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather4">
+            </div>
+            <img src="weather/img/thunder.png" class="weImgFu">
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather5">
+            </div>
+            <img src="weather/img/sunnyToCloudy.png" class="weImgFu">
+        </div>
+        <div class="futureWeather">
+            <div id="showWeather6">
+            </div>
+            <img src="weather/img/heavyRain.png" class="weImgFu">
+        </div>
+        <p class="footer">
+            <a target="_blank" href="https://github.com/mike652638/weather-forecast">欢迎访问"我的GitHub"查看本页面源代码</a>
+        </p>
+    </div>
+</body>
+
+</html>
