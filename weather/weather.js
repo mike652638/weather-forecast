@@ -119,8 +119,8 @@ $(document).ready(function() {
     function getWeather() {
 
         $.ajax({
-            "url": "https://v.juhe.cn/weather/index?cityname=" + cityUrlCode + "&dtype=&format=&key=6e33b4a7f611a7efc7096d721a107dc5",
-            //"url": "https://v.juhe.cn/weather/index?cityname=%E5%B9%BF%E5%B7%9E&dtype=&format=&key=864095a380",
+            //"url": "https://v.juhe.cn/weather/index?cityname=" + cityUrlCode + "&dtype=&format=&key=6e33b4a7f611a7efc7096d721a107dc5"(500次请求已用完),
+            "url": "https://v.juhe.cn/weather/index?cityname=" + cityUrlCode + "&dtype=&format=&key=46877144d4da706ad817b42b5030bc20",
             "type": "GET",
             "dataType": "JSONP",
             "data": "",
